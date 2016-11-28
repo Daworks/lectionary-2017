@@ -1,0 +1,165 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto&subset=latin');
+.church-calendar-2017 {
+	box-sizing:border-box;
+	&* {
+	box-sizing:border-box;
+	}
+
+	h1 {
+		text-align:center;
+	}
+	h2 {
+		margin-top:40px;
+		text-align:center;
+		color:#70563c;
+	}
+	.month-selector {
+		text-align:center;
+		margin-bottom:40px;
+		select {
+			height:32px;
+			border:1px solid #ccc;
+		}
+		button {
+			height:32px;
+			border-radius:4px;
+			border:1px solid #ccc;
+			background-color:#fff;
+			&:hover {
+				background-color:#574b43;
+				color:#fff;
+				cursor:pointer;
+			}
+		}
+	}
+	#moveTop {
+		position:fixed;
+		right: 20px;
+		bottom:20px;
+		width:40px;
+		height:40px;
+		border-radius:50%;
+		background-color:#574b43;
+		box-shadow:0 0 4px #000;
+		line-height:40px;
+		text-align:center;
+		font-size:12px;
+		a {
+			text-decoration: none;
+			color:#f9d5be;
+		}
+	}
+	ul {
+		margin:0
+	}
+	table {
+		width:100%;
+		border-collapse: collapse;
+		font-size: 14px;
+		font-family: 'Roboto', 'Apple SD Neo Gothic', '맑은고딕', malgungothic, sans-serif;
+		.text-center {
+			text-align: center;
+		}
+		.red {
+			color:#c94541;
+		}
+		.bg-purple {
+			background-color:#78009e;
+			color:#fff;
+		}
+		.middle-bar {
+			background: #e4e0e0;
+		}
+		td {
+			border:1px solid #ccc;	
+			padding:10px 14px;
+			h3 {
+				font-size:1em;
+				padding-left:20px;
+				color:#64574e
+			}
+			ul {
+				padding-left:20px;
+				margin-left:20px;
+			}
+		}
+		thead {
+			td {
+				text-align:center;
+				background: #cbb595;
+				font-weight: bold;
+				color:#fff;
+				text-shadow:0 0 4px #000;
+				letter-spacing: 0.1em;
+			}
+		}
+		tbody {
+			td {
+				&:nth-child(1) {
+					@extend .text-center;
+					width:80px
+				}
+				&:nth-child(2) {
+					@extend .text-center;
+					width:80px
+				}
+				&:nth-child(3) {
+					@extend .text-center;
+					width: 150px;
+				}
+				&:nth-child(4) {
+					@extend .text-center;
+					width:80px;
+				}
+				&:nth-child(5){
+					width:300px;
+				}
+			}
+			.wrap {
+				padding:0;
+			}
+		}
+	}
+
+	.inner-table {
+		border:1px solid purple;
+		td {
+			border:none;
+			border-right:1px solid #ccc;
+			border-bottom:1px solid #ccc;
+			&:nth-child(1){ width: 80px }
+			&:nth-child(2){ width: 80px }
+			&:nth-child(3){ width: 247px }
+			&:nth-child(4){ 
+				text-align:left; 
+				border-right:none;
+			}
+		}
+		tr:last-child {
+			td {
+				border-bottom:none;
+			}
+		}
+		tr:nth-child(2n) {
+			td{
+				background:#f8f4f4;
+			}
+		}
+		ul {
+			li {
+				display: inline-block;
+				&:after {
+					color:#cbc8c8;
+					content:'|';
+					padding:0 10px;
+				}
+				&:last-child {
+					&:after {
+						content:'';
+						padding:0;
+					}
+				}
+			}
+		}
+	}
+}
